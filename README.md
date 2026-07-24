@@ -70,3 +70,27 @@ In `backend/.env` set:
 ```
 PYTHON_CMD=python
 ```
+
+
+
+
+
+
+``bash
+cd frontend
+npm install
+npm run dev    # starts on port 5173
+```
+
+Open: http://localhost:5173
+
+## What's Stored in MongoDB
+
+| Collection | What's stored |
+|------------|---------------|
+| `users`    | name, email, bcrypt password hash, plan |
+| `reports`  | all report metadata, columns, chart summary |
+
+Reports are **permanently linked to your user account**. Log out and log back in — your reports are there.
+
+Guest users get temporary in-memory storage (cleared on server restart).
